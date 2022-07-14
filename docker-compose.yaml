@@ -1,0 +1,11 @@
+version: "2.1"
+services:
+  slack-ping:
+    build: .
+    image: mattirantakomi/slack-ping:20220714-1
+    restart: always
+networks:
+  default:
+    ipam:
+      config:
+        - subnet: 172.20.172.0/24
